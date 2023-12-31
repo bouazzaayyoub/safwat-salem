@@ -20,11 +20,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
   title: siteMetadata.title,
   description: siteMetadata.description,
+  keywords: siteMetadata.keywords,
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
-    images: ['/og-2-1.png', '/og-1-1.png'],
+    images: ['/image-home.png', '/logo2.png'],
     title: siteMetadata.title,
     description: siteMetadata.description,
     url: siteMetadata.siteUrl,
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/og-2-1.png', '/og-1-1.png'],
+    images: ['/image-home.png', '/logo2.png'],
     title: siteMetadata.title,
     description: siteMetadata.description,
   },

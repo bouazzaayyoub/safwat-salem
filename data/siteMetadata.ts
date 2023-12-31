@@ -1,19 +1,38 @@
 export const siteMetadata = {
   siteName: `safwat`,
-  title: `safwat`,
-  description: `Instantly Identify and Classify Plants with Our Herbal Classifier"`,
-  keywords: '',
+  title: 'مكتبة الشيخ صفوت محمود سالم: دروس قرآنية تيسيرًا للوصول والاستفادة',
+  description:
+    'دروس الشيخ صفوت محمود سالم - رحمه الله - في علم التجويد والقراءات عبر هذه المنصة المخصصة. تعلم وارتقِ بقراءتك لكتاب الله الكريم',
+  keywords: [
+    'دروس الشيخ صفوت محمود سالم',
+    'محاضرات قرآنية',
+    'علم التجويد والقراءات',
+    'تراث قرآني',
+    'تعليم القرآن',
+    'ميراث علمي',
+    'منصة التعليم القرآني',
+    'إرث علمي',
+    'دروس تجويد القرآن',
+    'فهرس دروس الشيخ صفوت محمود سالم',
+    'قراءة القرآن الكريم',
+    'المقرئ الراحل',
+    'استفادة من العلم',
+    'تاريخ التلاوة',
+    'معرفة القرآن',
+    'مكتبة الشيخ صفوت محمود سالم',
+    'علماء التجويد',
+    'تسهيل الوصول للدروس',
+    'قناة يوتيوب للشيخ صفوت محمود سالم',
+    'فهم القرآن الكريم',
+  ],
   author: 'Bouazza Ayyoub',
   metaRobots: 'index, follow',
-  language: 'en-US',
+  language: 'ar',
   theme: 'system',
-  siteUrl: `https://safwat-app.vercel.app`,
-
-  // Open Graph tags
-  ogImage: `https://safwat-app.vercel.app/og-2-1.png`,
+  siteUrl:
+    process.env.NEXT_PUBLIC_WEBSITE_PUBLIC_URL || 'http://localhost:3000',
 
   // Twitter tags
-  twImage: `https://safwat-app.vercel.app/og-2-1.png`,
-  locale: 'en-US',
+  locale: 'ar',
   githubUrl: 'https://github.com/miliariadnane/safwat-salem-api',
 };
