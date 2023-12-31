@@ -7,24 +7,24 @@ function Encounter({}: Props) {
   return (
     <main>
       <div
-        className="relative z-10 flex items-end justify-between pb-10 px-10 bg-page-pattern bg-center bg-cover h-52
-            before:content-['']
-            before:absolute
-            before:inset-0
-            before:block
-            before:bg-gradient-to-t
-            before:from-primary/70
-            before:to-gray-700
-            before:opacity-75
-            before:z-[-5]"
+        className="relative z-10 flex flex-col md:flex-row items-center md:items-end justify-between pb-10 pt-5 md:pt-0 px-10 bg-page-pattern bg-center bg-cover h-52
+        before:content-['']
+        before:absolute
+        before:inset-0
+        before:block
+        before:bg-gradient-to-t
+        before:from-primary/70
+        before:to-gray-700
+        before:opacity-75
+        before:z-[-5]"
       >
-        <h1 className="text-white text-6xl">المنوعات واللقاءات</h1>
+        <h1 className="text-white text-6xl text-center">المنوعات واللقاءات</h1>
         <p className="text-white"></p>
       </div>
 
-      <section className="max-w-5xl mx-auto py-10">
+      <section className="max-w-5xl mx-auto md:mx-5 lg:mx-auto py-10 px-6 md:px-0">
         <h2 className="font-bold text-xl">اكتشف الدروس</h2>
-        <div className="grid grid-cols-3 gap-5 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
           {encounterCourses.courses.map(({ description, id, title }, key) => (
             <CourseCard
               title={title}

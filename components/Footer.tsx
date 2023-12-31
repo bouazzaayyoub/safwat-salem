@@ -1,8 +1,10 @@
+import Link from 'next/link';
+
 const Footer = () => (
   <footer className="bg-[#1ab999] w-full">
-    <div className="w-full max-w-[85rem] pt-6  lg:pt-10 mx-auto">
+    <div className="w-full pt-6  lg:pt-10 mx-auto">
       {/* Grid */}
-      <div className="grid px-4 sm:px-6 lg:px-8 grid-cols-4 gap-14">
+      <div className="grid px-4 sm:px-6 lg:px-8 grid-cols-2 md:grid-cols-4 gap-14">
         <div className="col-span-1">
           <a
             className="flex-none text-xl font-semibold text-white dark:focus:outline-none dark:focus:ring-1 "
@@ -31,37 +33,38 @@ const Footer = () => (
         {/* End Col */}
         <div className="col-span-1">
           <h4 className="font-semibold text-gray-100">روابط مهمة</h4>
-          <div className="mt-3 grid space-y-3 text-sm">
-            <p>
-              <a
-                className="inline-flex gap-x-2 text-white dark:focus:outline-none dark:focus:ring-1"
-                href="#"
+          <ul className="mt-3 list-disc ms-6 text-sm text-white [&>li]:mb-3">
+            <li>
+              <Link
+                className="inline-flex gap-x-2 dark:focus:outline-none dark:focus:ring-1"
+                href="/about"
               >
                 عن المنصة
-              </a>
-            </p>
-            <p>
+              </Link>
+            </li>
+            <li>
               <a
-                className="inline-flex gap-x-2 text-white dark:focus:outline-none dark:focus:ring-1"
-                href="#"
+                className="inline-flex gap-x-2 dark:focus:outline-none dark:focus:ring-1"
+                href="/terms"
               >
                 شرط المنصة
               </a>
-            </p>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
       {/* End Grid */}
-      <div className="mt-5 px-4 sm:px-6 lg:px-8 py-2 bg-[#294058] sm:mt-12 grid gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
-        <div className="flex justify-between items-center">
+      <div className="mt-5 px-4 sm:px-6 lg:px-8 py-2 bg-[#294058] sm:mt-12 grid grid-cols-2 gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
+        <div className="">
           <p className="text-sm text-white">جميع الحقوق محفوظة © 2023</p>
         </div>
         {/* End Col */}
         {/* Social Brands */}
-        <div>
+        <div className="flex justify-end">
           <a
             className="w-10 h-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600"
-            href="#"
+            href="https://m.facebook.com/safwat.salem60"
+            target="_blank"
           >
             <svg
               className="flex-shrink-0 w-4 h-4"
@@ -76,7 +79,8 @@ const Footer = () => (
           </a>
           <a
             className="w-10 h-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600"
-            href="#"
+            href="https://www.youtube.com/@SafwatSalem"
+            target="_blank"
           >
             <svg
               className="flex-shrink-0 w-4 h-4"

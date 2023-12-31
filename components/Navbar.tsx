@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <div className="flex items-center px-10 py-2 bg-green-200">
+      <div className="fixed w-full z-30 flex items-center justify-center px-10 py-2 bg-green-200">
         <animated.div onMouseEnter={() => trigger()} style={appliedStyle}>
           <Image
             src="/palestine.png"
@@ -58,16 +58,12 @@ const Navbar = () => {
           النصر لفلسطين
         </span>
       </div>
-      <nav
-        className={` w-full md:static md:text-sm ${
-          state ? 'fixed z-10 h-full' : ''
-        }`}
-      >
-        <div className="max-w-7xl justify-between items-center mx-auto md:flex px-6">
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
+      <nav className={` w-full md:static md:text-sm`}>
+        <div className="pt-10 max-w-7xl justify-between items-center mx-auto md:flex px-6">
+          <div className="flex flex-row-reverse items-center justify-between py-3 md:py-5 md:block">
             <Link href="/" className=" ">
               <Image
-                src="/logo.png"
+                src="/logo2.png"
                 alt="logo"
                 width={35}
                 height={35}
@@ -116,11 +112,11 @@ const Navbar = () => {
           </div>
 
           <div
-            className={`pb-3 mt-8 md:pb-0 md:mt-0 md:block mx-auto ${
-              state ? '' : 'hidden'
+            className={`pb-3 md:pb-0 md:mt-0 md:block mx-auto transition-all ${
+              state ? 'block' : 'hidden'
             }`}
           >
-            <ul className="text-gray-700 justify-center items-center space-y-6 md:flex md:space-y-0 md:text-gray-600 md:font-medium">
+            <ul className="text-gray-700 rounded-lg p-3 z-20 md:p-0 md:bg-transparent justify-center items-center space-y-6 md:flex md:space-y-0 md:text-gray-600 md:font-medium">
               {navigation.map((route, idx) => {
                 return (
                   <li key={idx} className="me-6">
@@ -128,7 +124,7 @@ const Navbar = () => {
                       href={route.route}
                       className={`flex text-gray-400  transition px-3 relative text-center ${
                         pathname === route.route
-                          ? "font-bold text-primary transition-all after:content-[''] after:absolute after:h-[2px] after:w-1/2 after:block after:bg-primary/60 after:-bottom-1 after:right-0 after:-translate-x-1/2"
+                          ? "font-bold text-primary transition-all md:after:content-[''] md:after:absolute md:after:h-[2px] md:after:w-1/2 md:after:block md:after:bg-primary/60 md:after:-bottom-1 md:after:right-0 md:after:-translate-x-1/2"
                           : 'hover:text-gray-500'
                       }`}
                     >

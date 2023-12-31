@@ -17,8 +17,8 @@ export default function AboutUs({}: Props) {
       >
         <h1 className="text-white text-6xl">عن المنصة</h1>
       </div>
-      <section className="max-w-4xl mx-auto py-10">
-        <div className="col-xl-7 mx-auto">
+      <section className="max-w-4xl mx-auto px-6 md:px-0 py-10">
+        <div className="col-xl-7 mx-auto md:mx-5 lg:mx-auto">
           <h2 className="text-primary font-bold text-3xl mb-4">عن المنصة</h2>
           <p>
             هذه منصة خاصة بدروس ومحاضرات الشيخ المقرئ د. صفوت محمود سالم -رحمه

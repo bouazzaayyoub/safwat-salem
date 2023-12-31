@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -16,18 +17,18 @@ export default function Hero() {
           من تراث فضيلة الشيخ الدكتور صفوت سالم - رحمه الله -
         </p>
         <div className="flex gap-x-3 mx-auto items-center justify-center">
-          <button
-            type="button"
+          <Link
+            href="/about"
             className="text-sm bg-primary hover:bg-primary/90 px-5 py-1 rounded-full"
           >
             عن المنصة
-          </button>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            href="#content"
             className="text-sm bg-secondary hover:bg-secondary/90 px-5 py-1 rounded-full text-white"
           >
-            تواصل معنا
-          </a>
+            محتوى الموقع
+          </Link>
         </div>
       </div>
     </section>

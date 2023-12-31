@@ -18,7 +18,7 @@ export default function Terms({}: Props) {
         <h1 className="text-white text-6xl">شرط المنصة</h1>
       </div>
 
-      <section className="max-w-4xl mx-auto py-10">
+      <section className="max-w-4xl mx-auto md:mx-5 lg:mx-auto py-10 px-6 md:px-0">
         <div className="col-xl-7 mx-auto">
           <h2 className="text-primary font-bold text-3xl mb-4">شرط المنصة</h2>
           <p>

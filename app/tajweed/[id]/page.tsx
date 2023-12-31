@@ -102,7 +102,7 @@ function SingleCourse({ params }: Props) {
               {!!courses.length && (
                 <>
                   <h3 className="text-primary fw-bold mb-3">فهرس المحتويات</h3>
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {courses.map(({ title }, i) => (
                       <VideoCard
                         key={i}
