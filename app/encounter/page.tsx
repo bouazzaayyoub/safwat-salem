@@ -1,6 +1,5 @@
 import { encounterCourses } from '@/data/encounter';
 import CourseCard from '../components/CourseCard';
-import ShareButton from '../components/ShareButton';
 
 type Props = {};
 
@@ -23,7 +22,6 @@ function Encounter({}: Props) {
           <h1 className="text-white text-6xl text-center">
             المنوعات واللقاءات
           </h1>
-          <ShareButton />
         </div>
       </div>
 

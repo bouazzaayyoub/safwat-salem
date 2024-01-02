@@ -1,6 +1,5 @@
 import { readingCourses } from '@/data/reading';
 import CourseCard from '../components/CourseCard';
-import ShareButton from '../components/ShareButton';
 
 type Props = {};
 
@@ -21,7 +20,6 @@ function Reading({}: Props) {
       >
         <div className="flex justify-between">
           <h1 className="text-white text-6xl">القراءات</h1>
-          <ShareButton />
         </div>
       </div>
 
