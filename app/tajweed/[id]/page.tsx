@@ -1,5 +1,6 @@
 'use client';
 
+import ShareButton from '@/app/components/ShareButton';
 import VideoCard from '@/app/components/VideoCard';
 import { tajweedCourses } from '@/data/tajweed';
 import { useEffect, useState } from 'react';
@@ -75,9 +76,15 @@ function SingleCourse({ params }: Props) {
                 </div>
                 <div className="">
                   <div className="mt-3 flex flex-col align-items-center justify-content-between">
-                    <h4 className="my-5 text-center">
-                      {selectedCourse?.videos[videoId].title}
-                    </h4>
+                    <div className="flex justify-between items-center px-5">
+                      <h4 className="my-5 text-center">
+                        {selectedCourse?.videos[videoId].title}
+                      </h4>
+                      <div>
+                        <ShareButton />
+                      </div>
+                    </div>
+
                     {!!courses.length && (
                       <div className="flex justify-around w-full">
                         <button
@@ -105,6 +112,7 @@ function SingleCourse({ params }: Props) {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {courses.map(({ title }, i) => (
                       <VideoCard
+                        image="/quran.png"
                         key={i}
                         handleClick={() => setvideoId(i)}
                         title={title}

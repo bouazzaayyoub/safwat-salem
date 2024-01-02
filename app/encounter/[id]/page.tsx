@@ -1,5 +1,6 @@
 'use client';
 
+import ShareButton from '@/app/components/ShareButton';
 import VideoCard from '@/app/components/VideoCard';
 import { encounterCourses } from '@/data/encounter';
 import { useEffect, useState } from 'react';
@@ -75,9 +76,14 @@ function SingleCourse({ params }: Props) {
                 </div>
                 <div className="">
                   <div className="mt-3 flex flex-col align-items-center justify-content-between">
-                    <h4 className="my-5 text-center">
-                      {selectedCourse?.videos[videoId].title}
-                    </h4>
+                    <div className="flex justify-between items-center px-5">
+                      <h4 className="my-5 text-center">
+                        {selectedCourse?.videos[videoId].title}
+                      </h4>
+                      <div>
+                        <ShareButton />
+                      </div>
+                    </div>
                     {!!courses.length && (
                       <div className="flex justify-around w-full">
                         <button

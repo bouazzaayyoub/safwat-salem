@@ -2,16 +2,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-type Props = { title: string; description: string; href: string };
+type Props = {
+  title: string;
+  description: string;
+  href: string;
+  image?: string;
+};
 
-function CourseCard({ description, title, href }: Props) {
+function CourseCard({ description, title, href, image }: Props) {
   return (
     <div className="bg-white shadow-lg rounded-xl flex flex-col justify-between">
       <div className="">
         <div className="w-full min-h-[12rem] relative">
           <Image
             className="object-cover rounded-lg"
-            src="/quran.png"
+            src={image || '/quran.png'}
             alt="Image Description"
             fill
           />

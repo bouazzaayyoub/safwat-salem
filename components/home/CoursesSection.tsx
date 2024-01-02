@@ -49,6 +49,7 @@ function CoursesSection({}: Props) {
                       description={description}
                       title={title}
                       href={`/tajweed/${id}`}
+                      image="/quran.png"
                     />
                   ))}
               </div>
@@ -63,6 +64,7 @@ function CoursesSection({}: Props) {
                       description={description}
                       title={title}
                       href={`/reading/${id}`}
+                      image="/quran-2.jpg"
                     />
                   ))}
               </div>
@@ -77,6 +79,7 @@ function CoursesSection({}: Props) {
                       description={description}
                       title={title}
                       href={`/encounter/${id}`}
+                      image="/offnav-bg.png"
                     />
                   ))}
               </div>

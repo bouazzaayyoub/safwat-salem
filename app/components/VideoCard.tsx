@@ -1,9 +1,9 @@
 import React from 'react';
-import image from '../../public/quran-2.jpg';
+import bgImage from '../../public/quran-2.jpg';
 
-type Props = { handleClick: any; title: string };
+type Props = { handleClick: any; title: string; image?: string };
 
-function VideoCard({ handleClick, title }: Props) {
+function VideoCard({ handleClick, title, image }: Props) {
   return (
     <div
       onClick={handleClick}
@@ -17,7 +17,7 @@ function VideoCard({ handleClick, title }: Props) {
     before:opacity-75
     before:z-[-5] before:rounded-lg"
       style={{
-        backgroundImage: `url(${image.src})`,
+        backgroundImage: `url(${image || bgImage.src})`,
         backgroundPosition: 'center left',
         backgroundSize: 'cover',
       }}

@@ -27,6 +27,13 @@ const Navbar = () => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
+  const routeIsActive = (route: string) => {
+    if (route === '/') {
+      return route === pathname;
+    }
+    return pathname.includes(route);
+  };
+
   useEffect(() => {
     // Add closing the navbar menu when navigating
     const handleState = () => {
@@ -123,7 +130,7 @@ const Navbar = () => {
                     <Link
                       href={route.route}
                       className={`flex text-gray-400  transition px-3 relative text-center ${
-                        pathname === route.route
+                        routeIsActive(route.route)
                           ? "font-bold text-primary transition-all md:after:content-[''] md:after:absolute md:after:h-[2px] md:after:w-1/2 md:after:block md:after:bg-primary/60 md:after:-bottom-1 md:after:right-0 md:after:-translate-x-1/2"
                           : 'hover:text-gray-500'
                       }`}

@@ -1,10 +1,15 @@
 import Link from 'next/link';
 import React from 'react';
-import image from '../../public/quran-2.jpg';
+import bgImage from '../../public/quran-2.jpg';
 
-type Props = { title: string; description: string; href: string };
+type Props = {
+  title: string;
+  description: string;
+  href: string;
+  image?: string;
+};
 
-function CourseCard({ description, href, title }: Props) {
+function CourseCard({ description, href, title, image }: Props) {
   return (
     <Link
       href={href}
@@ -18,7 +23,7 @@ function CourseCard({ description, href, title }: Props) {
       before:opacity-75
       before:z-[-5] before:rounded-lg"
       style={{
-        backgroundImage: `url(${image.src})`,
+        backgroundImage: `url(${image || bgImage.src})`,
         backgroundPosition: 'center left',
         backgroundSize: 'cover',
       }}

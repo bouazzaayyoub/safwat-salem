@@ -3,8 +3,11 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="bg-[#e5f2f0]">
-      <div className="px-4 py-14 text-center relative ">
+    <section className="bg-[#e5f2f0] relative">
+      <div className="absolute opacity-70 hidden md:block translate-x-1/2 start-1/2">
+        <Image src="/zakh.svg" height="600" width="600" alt="pattren" />
+      </div>
+      <div className="px-4 py-14 text-center relative">
         <Image
           className="mx-auto mb-4"
           src="/hero.svg"
@@ -19,7 +22,7 @@ export default function Hero() {
         <div className="flex gap-x-3 mx-auto items-center justify-center">
           <Link
             href="/about"
-            className="text-sm bg-primary hover:bg-primary/90 px-5 py-1 rounded-full"
+            className="text-sm bg-primary text-white hover:bg-primary/90 px-5 py-1 rounded-full"
           >
             عن المنصة
           </Link>

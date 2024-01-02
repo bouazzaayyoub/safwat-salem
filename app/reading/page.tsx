@@ -1,5 +1,6 @@
 import { readingCourses } from '@/data/reading';
 import CourseCard from '../components/CourseCard';
+import ShareButton from '../components/ShareButton';
 
 type Props = {};
 
@@ -18,8 +19,10 @@ function Reading({}: Props) {
        before:opacity-75
        before:z-[-5]"
       >
-        <h1 className="text-white text-6xl">القراءات</h1>
-        <p className="text-white"></p>
+        <div className="flex justify-between">
+          <h1 className="text-white text-6xl">القراءات</h1>
+          <ShareButton />
+        </div>
       </div>
 
       <section className="max-w-5xl mx-auto md:mx-5 lg:mx-auto py-10 px-6 md:px-0">

@@ -1,5 +1,6 @@
 import { tajweedCourses } from '@/data/tajweed';
 import CourseCard from '../components/CourseCard';
+import ShareButton from '../components/ShareButton';
 
 type Props = {};
 
@@ -26,13 +27,17 @@ function Tajweed({}: Props) {
       </div>
 
       <section className="max-w-5xl mx-auto md:mx-5 lg:mx-auto py-10 px-6 md:px-0">
-        <h2 className="font-bold text-xl">اكتشف الدروس</h2>
+        <div className="flex justify-between">
+          <h2 className="font-bold text-xl">اكتشف الدروس</h2>
+          <ShareButton />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
           {tajweedCourses.courses.map(({ description, id, title }, key) => (
             <CourseCard
               title={title}
               description={description}
               href={`/tajweed/${id}`}
+              image="/quran.png"
               key={key}
             />
           ))}
