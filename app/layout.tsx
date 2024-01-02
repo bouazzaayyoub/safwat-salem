@@ -10,6 +10,7 @@ import './globals.css';
 import 'react-tabs/style/react-tabs.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Script from 'next/script';
 
 const almarai = Almarai({
   subsets: ['arabic'],
@@ -53,6 +54,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <Analytics />
+        <Script src="/hello.js" data-nscript="lazyOnload" />
       </body>
     </html>
   );

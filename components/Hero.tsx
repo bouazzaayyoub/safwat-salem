@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Hero() {
   return (
     <section className="bg-[#e5f2f0] relative">
-      <div className="absolute opacity-70 hidden md:block translate-x-1/2 start-1/2">
+      <div className="absolute opacity-50 hidden md:block translate-x-1/2 start-1/2">
         <Image src="/zakh.svg" height="600" width="600" alt="pattren" />
       </div>
       <div className="px-4 py-14 text-center relative">
