@@ -76,16 +76,16 @@ function SingleCourse({ params }: Props) {
                 </div>
                 <div className="">
                   <div className="mt-3 flex flex-col align-items-center justify-content-between">
-                    <div className="flex justify-between items-center px-5">
-                      <h4 className="my-5 text-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 items-center px-5">
+                      <h4 className="my-5 text-center md:text-start ">
                         {selectedCourse?.videos[videoId].title}
                       </h4>
-                      <div>
+                      <div className="text-center md:text-end">
                         <ShareButton />
                       </div>
                     </div>
                     {!!courses.length && (
-                      <div className="flex justify-around w-full">
+                      <div className="flex justify-around w-full mt-8">
                         <button
                           className="bg-primary/80 disabled:opacity-75 disabled:cursor-not-allowed text-white rounded-full px-10 py-2 hover:opacity-80"
                           onClick={handleNext}

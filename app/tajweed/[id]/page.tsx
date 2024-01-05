@@ -76,11 +76,11 @@ function SingleCourse({ params }: Props) {
                 </div>
                 <div className="">
                   <div className="mt-3 flex flex-col align-items-center justify-content-between">
-                    <div className="flex justify-between items-center px-5">
-                      <h4 className="my-5 text-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 items-center px-5">
+                      <h4 className="my-5 text-center md:text-start ">
                         {selectedCourse?.videos[videoId].title}
                       </h4>
-                      <div>
+                      <div className="text-center md:text-end">
                         <ShareButton />
                       </div>
                     </div>
